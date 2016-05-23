@@ -15,15 +15,11 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # 配置邮箱信息
-# email = "yyccqwer@163.com"
-# password = "qwer12345"
-# pop3_server = "pop.163.com"
-# pop3_server = "pop.163.com"
-email = "yyccqwer@sina.com"
-password = "qwer1234"
-pop3_server = "pop.sina.com"
-imap_server = "imap.sina.com"
-
+print("确保你的邮箱允许imap协议链接。\n")
+email = raw_input("输入邮箱：")
+password = raw_input("输入密码：")
+imap_server = raw_input("输入imap地址(如:imap.sina.com)：")
+print("开始抓取...\n")
 
 def guess_charset(msg):
 	charset = msg.get_charset()
